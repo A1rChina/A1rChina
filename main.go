@@ -5,14 +5,15 @@ import (
     "fmt"
     "io/ioutil"
     "net/http"
-    "os"
     "time"
 )
 
 type CryptoPrice struct {
-    USD                float64 `json:"usd"`
-    USD_24H_CHANGE    float64 `json:"usd_24h_change"`
+    USD             float64 `json:"usd"`
+    USD_24H_CHANGE float64 `json:"usd_24h_change"`
 }
+
+type CryptoData map[string]CryptoPrice
 
 func main() {
     // 获取加密货币价格和24小时变化
@@ -75,15 +76,17 @@ Hey there! I'm a passionate **Crypto Trader** riding the blockchain waves 🌊!
 }
 
 // 根据24小时价格变化显示趋势 Emoji
-func trendEmoji(price float64, change float64) string {
+func trendEmoji(_ float64, change float64) string {
     switch {
-    case change > 5.0:  // 涨幅超过5%
+    case change > 10.0:  // 大幅上涨（超过10%）
         return "🚀"
-    case change > 0:    // 0-5%涨幅
+    case change > 3.0:   // 中等上涨（3-10%）
         return "📈"
-    case change > -5.0: // 0-5%跌幅
+    case change >= -3.0: // 稳定区间（-3% 到 3%）
+        return "➡️"
+    case change >= -10.0: // 中等下跌（-3% 到 -10%）
         return "📉"
-    default:           // 跌幅超过5%
+    default:            // 大幅下跌（超过-10%）
         return "💎"
     }
 }
