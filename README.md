@@ -3,12 +3,12 @@
 Hey there! I'm a passionate **Crypto Trader** riding the blockchain waves 🌊!
 
 ## 🌟 Live Market Snapshot
-*Last Updated: Tue, 06 Oct 2026 12:57:26 UTC* ⏰
+*Last Updated: Tue, 06 Oct 2026 22:27:30 UTC* ⏰
 
 | Coin       | Price (USD)    | Trend  |
 |------------|----------------|--------|
-| **Bitcoin (BTC)** ₿ | $86230.00 (0.42%) | ➡️ |
-| **Ethereum (ETH)** Ξ | $2715.85 (0.20%) | ➡️ |
+| **Bitcoin (BTC)** ₿ | $85557.00 (-0.44%) | ➡️ |
+| **Ethereum (ETH)** Ξ | $2696.92 (-0.76%) | ➡️ |
 
 ## 🛠️ Tech Stack & Skills
 - **Languages**: Go, Python, JavaScript 💻
